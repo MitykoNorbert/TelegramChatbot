@@ -9,9 +9,11 @@ import base_valaszok as R
 from appointment_handler import AppointmentHandler
 from appointment_session import AppointmentSession
 from panasz_session import PanaszSession
+from szam_jatek import JatekSession
 
 sessions = {}
 panasz = {}
+jatek = {}
 appointmentHandler = AppointmentHandler()
 appointmentHandler.load_appointments()
 appointmentHandler.remove_old_appointments()
@@ -45,7 +47,9 @@ def help_command(update, context):
                               'áttekint - Időpontjaid áttekintése\n'
                               'óra - A pontos idő és dátum\n'
                               'kicsoda - Rövid leírás a Helper Bot chatbotról\n'
-                              'panasz - Ha meg szeretnél osztani velünk valamilyen problémát\n')
+                              'panasz - Ha meg szeretnél osztani velünk valamilyen problémát\n'
+                              'játék - Számolós játék indítása \n'
+                              'kilépés - Az adott interakció megszakítása \n')
     if context.error is not None:
         error(update, context)
 
@@ -59,14 +63,17 @@ def handle_message(update, context):
     :return: a válasz üzenet
     """
     text = str(update.message.text).lower()
+
     username = update.message.from_user.username
     if username not in sessions:
         sessions[username] = AppointmentSession(appointmentHandler, username)
     session = sessions[username]
+
     if username not in panasz:
         panasz[username] = PanaszSession(False, username)
-    response = R.sample_responses(text, username, session, panasz[username])
-
+    if username not in jatek:
+        jatek[username] = JatekSession(5)
+    response = R.sample_responses(text, username, session, panasz[username], jatek[username])
     update.message.reply_text(response)
     if context.error is not None:
         error(update, context)

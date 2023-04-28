@@ -4,11 +4,11 @@ Itt dől el, hogy egyszerű kulcsszavakra milyen válasz érkezzen,
 illetve, hogy szükséges-e tovább adni az üzenetet.
 """
 from datetime import datetime
-
+from szam_jatek import JatekSession
 from panasz import Panasz
 
 
-def sample_responses(input_text, user, session, panasz):
+def sample_responses(input_text, user, session, panasz, jatek_session):
     """
     Ez a függvény kezeli a bejövő szöveges üzeneteket.
         Az egyszerű üzeneteket megválaszolja, a több lépéses folyamatokat pedig továbbadja
@@ -55,6 +55,9 @@ def sample_responses(input_text, user, session, panasz):
         panasz.panaszmode = True
         response = "Kérjük add meg egy üzenetben a problémát, amivel szembesültél.\n" \
                    "Ha mégsem szeretnél panaszt írni, akkor írd be a 'mégse' szót."
+    if user_message in ("jatek", "játék", "game") \
+            or jatek_session.in_game:
+        response = jatek_session.response(input_text)
     if response is not None:
         return response
     return "Sajnálom " + username + ", viszont ezt nem tudtam értelmezni.\n" \
