@@ -25,7 +25,7 @@ class Panasz:
         """
         A panaszt file-ba mentő függvény
         """
-        filename = f"Reklamaciok/{self.username}-{self.ido.strftime('%Y-%m-%d_%H-%M-%S')}.txt"
+        filename = f"TelegramChatbotProject/Reklamaciok/{self.username}-{self.ido.strftime('%Y-%m-%d_%H-%M-%S')}.txt"
         with open(filename, "w", encoding="utf-8") as file:
             file.write(f"{str(self.username)}\n{self.text}\n")
 
