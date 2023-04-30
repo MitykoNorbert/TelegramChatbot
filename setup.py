@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='TelegramChatbotProject',
-    version='1.0.0',
+    version='1.0.1',
     packages=['telegramchatbotproject'],
     url='https://github.com/MitykoNorbert/TelegramChatbot',
     license='',
