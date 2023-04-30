@@ -1,0 +1,16 @@
+README.md
+setup.py
+TelegramChatbotProject.egg-info/PKG-INFO
+TelegramChatbotProject.egg-info/SOURCES.txt
+TelegramChatbotProject.egg-info/dependency_links.txt
+TelegramChatbotProject.egg-info/top_level.txt
+telegramchatbotproject/api_key.py
+telegramchatbotproject/appointment.py
+telegramchatbotproject/appointment_handler.py
+telegramchatbotproject/appointment_session.py
+telegramchatbotproject/base_valaszok.py
+telegramchatbotproject/kerdes.py
+telegramchatbotproject/main.py
+telegramchatbotproject/panasz.py
+telegramchatbotproject/panasz_session.py
+telegramchatbotproject/szam_jatek.py
