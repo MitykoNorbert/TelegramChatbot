@@ -28,7 +28,7 @@ def start_command(update, context):
     :param context: telegram package változó
     """
     print(str(update) + " + " + str(context) + " Conversation started")
-    update.message.reply_text('Type something')
+    update.message.reply_text('Beszélgetés elindítva')
 
 
 def help_command(update, context):
