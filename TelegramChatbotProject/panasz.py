@@ -3,6 +3,7 @@ Ebben a modulban a panaszkezeléshez szükséges
 Panasz osztályt valósítjuk meg.
 """
 from datetime import datetime
+import os
 
 
 class Panasz:
@@ -25,7 +26,7 @@ class Panasz:
         """
         A panaszt file-ba mentő függvény
         """
-        filename = f"TelegramChatbotProject/Reklamaciok/{self.username}-{self.ido.strftime('%Y-%m-%d_%H-%M-%S')}.txt"
+        filename = os.getcwd()+f"/TelegramChatbotProject/Reklamaciok/{self.username}-{self.ido.strftime('%Y-%m-%d_%H-%M-%S')}.txt"
         with open(filename, "w", encoding="utf-8") as file:
             file.write(f"{str(self.username)}\n{self.text}\n")
 

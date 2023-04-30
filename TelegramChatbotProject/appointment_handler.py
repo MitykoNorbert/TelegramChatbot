@@ -12,12 +12,13 @@ class AppointmentHandler:
     Ebben az osztályban találhatóak az időpontok kezeléséért felelős függvények
     """
 
-    def __init__(self):
+    def __init__(self, path):
         """Konstruktor
                     Args:
                         appointments[]: Az időpontokat tartalmazó tömb
                     """
         self.appointments = []
+        self.path=path
 
     def add_appointment(self, appointment):
         """Adott időpont foglalását rögzítő függvény
@@ -105,7 +106,7 @@ class AppointmentHandler:
 
     def load_appointments(self):
         """Fájlból betölti az eltárolt időpontokat egy tömbbe"""
-        filename = "TelegramChatbotProject/Content/Appointments.json"
+        filename = self.path+"/TelegramChatbotProject/Content/Appointments.json"
         with open(filename, "r", encoding="utf-8") as file:
             data = json.load(file)
             for appointment_data in data["appointments"]:
@@ -134,7 +135,7 @@ class AppointmentHandler:
         """"Fájlba mentjük a változtatásokat az időpontokon
                 Minden foglalás és törlés után mentünk, hogy ha bármilyen okból leáll a rendszer,
                 a felhasználók változtatásai ne veszhessenek el."""
-        filename = "TelegramChatbotProject/Content/Appointments.json"
+        filename = self.path+"/TelegramChatbotProject/Content/Appointments.json"
         data = {"appointments": []}
         for appointment in self.appointments:
             appointment_data = {

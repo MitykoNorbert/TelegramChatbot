@@ -10,11 +10,12 @@ from appointment_handler import AppointmentHandler
 from appointment_session import AppointmentSession
 from panasz_session import PanaszSession
 from szam_jatek import JatekSession
+import os
 
 sessions = {}
 panasz = {}
 jatek = {}
-appointmentHandler = AppointmentHandler()
+appointmentHandler = AppointmentHandler(os.getcwd())
 appointmentHandler.load_appointments()
 appointmentHandler.remove_old_appointments()
 appointmentHandler.create_missing_appointments()
