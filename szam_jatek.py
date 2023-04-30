@@ -10,7 +10,7 @@ class JatekSession:
     Ez az osztály kezeli a chatbot számjáték munkamentetét
     """
 
-    def __init__(self,num):
+    def __init__(self):
         """
         Konstruktor a játék session osztályhoz.
         """

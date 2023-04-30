@@ -16,7 +16,6 @@ class Kerdes:
         self.valasz = 0
         self.text = self.kerdest_general()
 
-
     def kerdest_general(self):
         """
         Generál egy egyszerű kérdést

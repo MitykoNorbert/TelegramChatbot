@@ -115,6 +115,8 @@ class AppointmentHandler:
                     appointment_data["name"]
                 )
                 self.appointments.append(appointment)
+        appointments=self.appointments
+        return appointments
 
     def get_free_appointments(self, date):
         """A még le nem foglalt időpontokat lekérő metódus

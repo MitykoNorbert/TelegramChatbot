@@ -72,7 +72,7 @@ def handle_message(update, context):
     if username not in panasz:
         panasz[username] = PanaszSession(False, username)
     if username not in jatek:
-        jatek[username] = JatekSession(5)
+        jatek[username] = JatekSession()
     response = R.sample_responses(text, username, session, panasz[username], jatek[username])
     update.message.reply_text(response)
     if context.error is not None:

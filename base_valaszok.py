@@ -4,7 +4,6 @@ Itt dől el, hogy egyszerű kulcsszavakra milyen válasz érkezzen,
 illetve, hogy szükséges-e tovább adni az üzenetet.
 """
 from datetime import datetime
-from szam_jatek import JatekSession
 from panasz import Panasz
 
 

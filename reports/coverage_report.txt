@@ -1,0 +1,10 @@
+Name                     Stmts   Miss  Cover
+--------------------------------------------
+Tests\chatbot_test.py       74      1    99%
+appointment.py              24     10    58%
+appointment_handler.py      91     53    42%
+appointment_session.py     106     53    50%
+kerdes.py                   22      0   100%
+szam_jatek.py               34      4    88%
+--------------------------------------------
+TOTAL                      351    121    66%

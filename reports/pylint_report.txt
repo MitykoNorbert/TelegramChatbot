@@ -1,0 +1,21 @@
+************* Module appointment_handler
+chatbotreport\appointment_handler.py:41:15: W0718: Catching too general exception Exception (broad-exception-caught)
+chatbotreport\appointment_handler.py:164:15: W0718: Catching too general exception Exception (broad-exception-caught)
+************* Module appointment_session
+chatbotreport\appointment_session.py:71:0: C0301: Line too long (102/100) (line-too-long)
+chatbotreport\appointment_session.py:168:23: W0718: Catching too general exception Exception (broad-exception-caught)
+chatbotreport\appointment_session.py:28:4: R0912: Too many branches (20/12) (too-many-branches)
+chatbotreport\appointment_session.py:28:4: R0915: Too many statements (82/50) (too-many-statements)
+************* Module kerdes
+chatbotreport\kerdes.py:57:0: C0301: Line too long (102/100) (line-too-long)
+************* Module main
+chatbotreport\main.py:93:14: E1123: Unexpected keyword argument 'use_context' in constructor call (unexpected-keyword-arg)
+chatbotreport\main.py:93:14: E1120: No value for argument 'update_queue' in constructor call (no-value-for-parameter)
+chatbotreport\main.py:94:17: E1101: Instance of 'Updater' has no 'dispatcher' member (no-member)
+chatbotreport\main.py:97:42: E1101: Module 'telegram.ext.Filters' has no 'text' member; maybe 'Text'? (no-member)
+chatbotreport\main.py:101:4: E1101: Instance of 'Updater' has no 'idle' member (no-member)
+************* Module szam_jatek
+chatbotreport\szam_jatek.py:8:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+
+------------------------------------------------------------------
+Your code has been rated at 9.26/10 (previous run: 9.26/10, +0.00)
