@@ -2,11 +2,11 @@
 Ebben a modulban vannak a tesztek
 """
 import unittest
-from kerdes import Kerdes, SzuperKerdes
-from szam_jatek import JatekSession
-from appointment import Appointment
-from appointment_session import AppointmentSession
-from appointment_handler import AppointmentHandler
+from TelegramChatbotProject.kerdes import Kerdes, SzuperKerdes
+from TelegramChatbotProject.szam_jatek import JatekSession
+from TelegramChatbotProject.appointment import Appointment
+from TelegramChatbotProject.appointment_session import AppointmentSession
+from TelegramChatbotProject.appointment_handler import AppointmentHandler
 
 
 class ChatbotTester(unittest.TestCase):

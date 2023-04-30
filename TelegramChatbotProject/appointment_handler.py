@@ -105,7 +105,7 @@ class AppointmentHandler:
 
     def load_appointments(self):
         """Fájlból betölti az eltárolt időpontokat egy tömbbe"""
-        filename = "Content/Appointments.json"
+        filename = "TelegramChatbotProject/Content/Appointments.json"
         with open(filename, "r", encoding="utf-8") as file:
             data = json.load(file)
             for appointment_data in data["appointments"]:
@@ -134,7 +134,7 @@ class AppointmentHandler:
         """"Fájlba mentjük a változtatásokat az időpontokon
                 Minden foglalás és törlés után mentünk, hogy ha bármilyen okból leáll a rendszer,
                 a felhasználók változtatásai ne veszhessenek el."""
-        filename = "Content/Appointments.json"
+        filename = "TelegramChatbotProject/Content/Appointments.json"
         data = {"appointments": []}
         for appointment in self.appointments:
             appointment_data = {
